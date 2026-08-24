@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Đặc Sản Thái Nguyên - Tinh Hoa Trà Việt</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&amp;family=EB+Garamond:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary-fixed-dim": "#ecc246",
+                        "primary": "#755b00",
+                        "inverse-primary": "#ecc246",
+                        "surface-container": "#f4eddd",
+                        "primary-container": "#c9a227",
+                        "surface-container-highest": "#e9e2d2",
+                        "on-surface-variant": "#4d4635",
+                        "on-primary-container": "#4b3a00",
+                        "error": "#ba1a1a",
+                        "inverse-on-surface": "#f7f0df",
+                        "on-primary": "#ffffff",
+                        "inverse-surface": "#333025",
+                        "surface-dim": "#e0dac9",
+                        "surface-container-lowest": "#ffffff",
+                        "on-primary-fixed-variant": "#584400",
+                        "surface-variant": "#e9e2d2",
+                        "primary-fixed": "#ffe08e",
+                        "on-tertiary-fixed-variant": "#603f33",
+                        "surface-container-high": "#eee8d7",
+                        "error-container": "#ffdad6",
+                        "on-surface": "#1e1c12",
+                        "on-tertiary-fixed": "#2e150b",
+                        "surface": "#fff9ec",
+                        "surface-bright": "#fff9ec",
+                        "on-tertiary-container": "#543429",
+                        "tertiary-container": "#c99d8e",
+                        "on-secondary-container": "#217128",
+                        "secondary-container": "#a0f399",
+                        "secondary-fixed-dim": "#88d982",
+                        "tertiary-fixed-dim": "#ebbcac",
+                        "secondary-fixed": "#a3f69c",
+                        "on-secondary-fixed-variant": "#005312",
+                        "tertiary-fixed": "#ffdbcf",
+                        "on-error-container": "#93000a",
+                        "on-secondary-fixed": "#002204",
+                        "on-error": "#ffffff",
+                        "outline": "#7f7663",
+                        "on-background": "#1e1c12",
+                        "surface-container-low": "#faf3e2",
+                        "outline-variant": "#d1c5af",
+                        "on-primary-fixed": "#241a00",
+                        "tertiary": "#7a5649",
+                        "background": "#fff9ec",
+                        "surface-tint": "#755b00",
+                        "on-secondary": "#ffffff",
+                        "secondary": "#1b6d24",
+                        "on-tertiary": "#ffffff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "margin-desktop": "48px",
+                        "container-max": "1280px",
+                        "unit": "8px",
+                        "margin-mobile": "16px",
+                        "gutter": "24px"
+                    },
+                    "fontFamily": {
+                        "body-lg": ["Be Vietnam Pro", "sans-serif"],
+                        "headline-md": ["EB Garamond", "serif"],
+                        "body-md": ["Be Vietnam Pro", "sans-serif"],
+                        "label-sm": ["Be Vietnam Pro", "sans-serif"],
+                        "headline-lg-mobile": ["EB Garamond", "serif"],
+                        "headline-lg": ["EB Garamond", "serif"],
+                        "display-lg": ["EB Garamond", "serif"]
+                    },
+                    "fontSize": {
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "500" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "label-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "headline-lg-mobile": ["28px", { "lineHeight": "36px", "fontWeight": "500" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "fontWeight": "500" }],
+                        "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "600" }]
+                    },
+                    animation: {
+                        'marquee': 'marquee 40s linear infinite',
+                        'marquee-reverse': 'marquee-reverse 50s linear infinite',
+                        'float': 'float 6s ease-in-out infinite',
+                        'float-delayed': 'float 7s ease-in-out infinite 1s',
+                        'float-slow': 'float 8s ease-in-out infinite 2s'
+                    },
+                    keyframes: {
+                        marquee: {
+                            '0%': { transform: 'translateX(0%)' },
+                            '100%': { transform: 'translateX(-50%)' }
+                        },
+                        'marquee-reverse': {
+                            '0%': { transform: 'translateX(-50%)' },
+                            '100%': { transform: 'translateX(0%)' }
+                        },
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-10px)' }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { background-color: theme('colors.surface'); color: theme('colors.on-surface'); overflow-x: hidden; }
+        .hide-scroll::-webkit-scrollbar { display: none; }
+        .hide-scroll { -ms-overflow-style: none; scrollbar-width: none; }
+        .image-glow:hover { box-shadow: 0 0 20px rgba(201, 162, 39, 0.4); }
+    </style>
+</head>
+<body class="antialiased min-h-screen font-body-md text-body-md flex flex-col">
+<!-- TopAppBar -->
+<header class="docked full-width top-0 sticky z-50 bg-surface/85 backdrop-blur-md dark:bg-inverse-surface/85 shadow-sm border-b border-outline-variant/10 hidden md:block">
+    <div class="flex flex-col w-full max-w-container-max mx-auto px-margin-desktop">
+        <div class="flex items-center justify-between h-20">
+            <div class="flex items-center gap-4">
+                <a href="index.html" class="flex items-center gap-3">
+                    <img alt="Đặc Sản Thái Nguyên Logo" class="h-12 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD8QUB2n5Oq6F67vtBnd8T5fgLTDPMUikCeqOtU9T7bYSy2jliHstK3MIbVlKPeS05dlu9xnYHfPjP6dg70CTi27b3iTTzyOwZUo_YsuGzfrJU61yxhzPF5l0Aoe1KHOhx5d2ZF9zsEld4zqHE8q4C6_ITPfjzTAygR3XVD_G5ZTkvvNr_GgP6Hw4_yKbXAATy5tMTtcNXyXH0n-0E2KqmygeywtNL8UGdICxa8luZlZXLBIRwRSPYBKg"/>
+                    <span class="font-headline-lg text-headline-lg font-bold text-secondary dark:text-secondary-fixed">Đặc Sản Thái Nguyên</span>
+                </a>
+            </div>
+            <nav class="flex items-center gap-8">
+                <a class="text-secondary font-bold border-b-2 border-secondary pb-1 font-label-sm text-label-sm uppercase hover:text-primary-container transition-all duration-300" href="index.html">Trang chủ</a>
+                <a class="text-on-surface-variant hover:text-secondary transition-colors duration-200 font-label-sm text-label-sm uppercase hover:text-primary-container transition-all duration-300" href="sanpham.html">Sản phẩm</a>
+            </nav>
+            <div class="flex items-center gap-6">
+                <a href="giohang.html#wishlist" class="text-secondary dark:text-secondary-fixed hover:text-primary-container transition-all duration-300 scale-95 transition-transform duration-150">
+                    <span class="material-symbols-outlined">favorite</span>
+                </a>
+                <a href="giohang.html" class="text-secondary dark:text-secondary-fixed hover:text-primary-container transition-all duration-300 scale-95 transition-transform duration-150">
+                    <span class="material-symbols-outlined">shopping_cart</span>
+                </a>
+                <a href="login.html" class="text-secondary dark:text-secondary-fixed hover:text-primary-container transition-all duration-300 scale-95 transition-transform duration-150">
+                    <span class="material-symbols-outlined">person</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</header>
+<!-- SideNavBar (Mobile) -->
+<div class="docked full-width bottom-0 z-50 md:hidden bg-surface dark:bg-inverse-surface shadow-[0_-4px_20px_rgba(46,125,50,0.05)] shadow-lg fixed bottom-0 left-0 w-full flex justify-around items-center px-4 py-2 pb-safe">
+    <a class="flex flex-col items-center justify-center bg-secondary-container text-on-secondary-container rounded-full px-4 py-1 active:bg-surface-container-high active:scale-90 transition-transform duration-200" href="index.html">
+        <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">home</span>
+        <span class="font-label-sm text-label-sm mt-1">Trang chủ</span>
+    </a>
+    <a class="flex flex-col items-center justify-center text-on-surface-variant active:bg-surface-container-high active:scale-90 transition-transform duration-200" href="sanpham.html">
+        <span class="material-symbols-outlined">grid_view</span>
+        <span class="font-label-sm text-label-sm mt-1">Sản phẩm</span>
+    </a>
+    <a class="flex flex-col items-center justify-center text-on-surface-variant active:bg-surface-container-high active:scale-90 transition-transform duration-200" href="giohang.html#wishlist">
+        <span class="material-symbols-outlined">favorite</span>
+        <span class="font-label-sm text-label-sm mt-1">Yêu thích</span>
+    </a>
+    <a class="flex flex-col items-center justify-center text-on-surface-variant active:bg-surface-container-high active:scale-90 transition-transform duration-200" href="giohang.html">
+        <span class="material-symbols-outlined">shopping_bag</span>
+        <span class="font-label-sm text-label-sm mt-1">Giỏ hàng</span>
+    </a>
+</div>
+<main class="flex-grow flex flex-col justify-center overflow-hidden py-12 bg-surface-container-lowest">
+    <!-- Marquee 1 (Forward) -->
+    <div class="flex overflow-hidden whitespace-nowrap mb-6 py-4">
+        <div class="flex gap-6 animate-marquee min-w-full items-center">
+            <div class="w-[300px] md:w-[450px] h-[400px] shrink-0 rounded-2xl overflow-hidden animate-float image-glow transition-all duration-500 hover:scale-[1.02]">
+                <img alt="Bánh chưng Bờ Đậu" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCg92kScNr-4ubXKbv-ukd1pYKv2LfWb0CpmvFzlocrw8vESV3H2NSJwoqnaLkFltBhjUnIaBHB6L90zFL4GeJg2Y43fOWypdZmooP0kv0EqDNi9Yv61oehVvGZse3xRM7cgCoKOh84LypvsvBlOZoU7vnbb57r3N7CyN3CE1FVkQGhXxdNvLgb-9mdpDq_cSPM6RQO23eRkEAJrm8eHnqaweWhjt3inkxHGCYORapI0b6Ge3U0K75tEg"/>
+            </div>
+            <div class="w-[400px] md:w-[600px] h-[350px] shrink-0 rounded-2xl overflow-hidden animate-float-delayed image-glow transition-all duration-500 hover:scale-[1.02]">
+                <img alt="Chè Tân Cương" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB9AkRtQi4F430F4ylctz3hTKqq2jTNZkzbRYaeRMQhQQuD6vYeX863dzZ0o0WuCEJHARDOUzqi0NvFy-QpEFzZuob-r9PwrhOrVYbjN_c0clRRKzgrYi6gR8O1l5aCqRT3HaamaBzhkvhwkT6_uFu9054L07rKuUt_t1TFj2kuNOLeA7FLCyQoi_r41nOG7TcuLZO9_jrjani0rwfXnnXxKYtJYgqdBgGH2xUS914G-2Dk86VAc3ODXQ"/>
+            </div>
+            <div class="w-[300px] md:w-[400px] h-[450px] shrink-0 rounded-2xl overflow-hidden animate-float-slow image-glow transition-all duration-500 hover:scale-[1.02]">
+                <img alt="Cơm lam" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCIpsGu335LDEnyAd3yPYnUJhzvgfv03C4TvxDRLDiPrmUllWE2AhNDHRmr84vQ85XP6Zy3YISnYv9etMWJicbl0O593xSgGMkTf5pSm5sC6dlD1mSoQvBazBXFux9y3PEn5UkzJ80AyJzUNJN2tiy3SIJQTbZgaD-Aqy3M-MGV1gibYQGq6N48KfmmbRD44JkO0kfdmn8_Rc0Q8vP7ZIspkgmBCxyFeJZ2woLaVzg8K9Xrh0iM0FsE8A"/>
+            </div>
+            <div class="w-[350px] md:w-[500px] h-[380px] shrink-0 rounded-2xl overflow-hidden animate-float image-glow transition-all duration-500 hover:scale-[1.02]">
+                <img alt="Nem chua" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAuGGKvWt96KQ5tXj8307e4YSqCBEIQqX2gXakO-OpuxKMQ0xBLD7OnugOO0TzhAB9Ber6EZg3QADKPycTZX4T_kC5F6HYKx8BVYQ6VfDJcmYiZR8V2t07ta-ZVVO8p2lhoXxAB37bDYW425HUD22JOeJzbLD8gjX1BOYcbmaWkWE6_j_H0ffnp78YgqePfHTVqJcwMOb0NyYLfZnII3LTMyymUylqJAtFuQJY4aMGQeIq4KCFHyk08nQ"/>
+            </div>
+            <!-- Duplicate for seamless loop -->
+            <div class="w-[300px] md:w-[450px] h-[400px] shrink-0 rounded-2xl overflow-hidden animate-float image-glow transition-all duration-500 hover:scale-[1.02]">
+                <img alt="Bánh chưng Bờ Đậu" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCKSQsCJry5wfowPp9nXT8b9ED_MPsOMNGrnMlsb6N8FazEwLTYq22bt-m9S7hJwwYwEDRvwTB-PbrlUXwtBvURKesL7eXLRKyhCUt_5icHgZp_h-NX0HmcPivRjJJQzgYo96G3Rsto0NDyoBgRPhg8xoLoR-v7HKbBf5nF5NL3pUtQg2HoljX__2D8dHSgnJzcXJrlUxtN6yQs1OjcReIYZQ43QvWe6BdZd9R5y1CrgCDa3WE-dCzOJg"/>
+            </div>
+            <div class="w-[400px] md:w-[600px] h-[350px] shrink-0 rounded-2xl overflow-hidden animate-float-delayed image-glow transition-all duration-500 hover:scale-[1.02]">
+                <img alt="Chè Tân Cương" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC6ImUv2wvZ4YJ6aTaJ8V6H3KG0nmctF10veLyzL7otWILZyF_a1eQZbEGawI03W0wWEzMZdmmmVHWg4sfDrJnSbQjiifLGmV0i5yASlQJD42r0-sZhMgiZikuOEa-vgmkzg5yybLvvHjqmHPrHye8xIOX13Nqj4e89OeOC4vc1BHkHoEBIxksjqDtcTqCzPLXS4hVPixau9zFqSpLDi4yDHc8SC3uI4jAiipw9c3CKGuYk_4NlTSKr9g"/>
+            </div>
+            <div class="w-[300px] md:w-[400px] h-[450px] shrink-0 rounded-2xl overflow-hidden animate-float-slow image-glow transition-all duration-500 hover:scale-[1.02]">
+                <img alt="Cơm lam" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBfmDyT3vt-HSKqSZJU_lOQocJSbf_ZEAs2oGEzxty9p60sWyCPQ-HpkxjTnfUeYVisWh2axJp6amhyEN-_eKLD1W7wP9gte7iHmY5brhN3uO2TMcA3Lip8h_DiNJlA9gETX4FAhfitmPa-7W54QhUKho0g8k7Np1APWWqm-E_guSDZmEJpFpUmD5R3yfTEgTIfgUFrsUfo-hUBbGc05Uld3uR8PVD7E2uJABy15O6RrMeBl73JnmIVHw"/>
+            </div>
+            <div class="w-[350px] md:w-[500px] h-[380px] shrink-0 rounded-2xl overflow-hidden animate-float image-glow transition-all duration-500 hover:scale-[1.02]">
+                <img alt="Nem chua" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDdi5KDeQP5i5Qz8a8VoRULIXvoJMXjCeCv6DfBVtpjnGeRP-VY7BZYwrDfi0i7B4GB8M7f37Pnjp6w0SRl44rNw_RM_6LZWrRJ1JcGqbD7xJRVYquZ4gmps953j2YbMBSdCsNJgpdDe1uEK5s2-oKOUC6ICLSV-1yQUsOOzhCA_LVDA7HkF4jB8cK8wAv-65O1t6ZQoq6ZDw686dflJE767P221NxSwozHFPMFBXXvGJWpYFCerx19-g"/>
+            </div>
+        </div>
+    </div>
+    <!-- Marquee 2 (Reverse) -->
+    <div class="flex overflow-hidden whitespace-nowrap py-4">
+        <div class="flex gap-6 animate-marquee-reverse min-w-full items-center">
+            <div class="w-[350px] md:w-[550px] h-[380px] shrink-0 rounded-2xl overflow-hidden animate-float-delayed image-glow transition-all duration-500 hover:scale-[1.02]">
+                <img alt="Mì gạo" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC4K2L75tLlM99TGgx3PfUXFn6NJo3w7dGb-LAosJI-XkBwfhvTXv8anzx7195MV0lexQNYxJnHyZ6TOBNUvosOI0w5YvSJ-nuL4E26DODQfUhfK4BnkN8KOz4VR_lzt0IeBmTZvt4DbxjVeHN3RiIzESCWyr7xUI4XMeFY6WQ1Ke_6GxWTWDUugIOv-Fxnn6FSq_vYSW38A9YLdZSVLEtqGJ4dn4GPc7-7BF4osnd66xlYSNvO9hfP2w"/>
+            </div>
+            <div class="w-[300px] md:w-[400px] h-[450px] shrink-0 rounded-2xl overflow-hidden animate-float-slow image-glow transition-all duration-500 hover:scale-[1.02]">
+                <img alt="Đặc sản" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAfLgCZP804EvwY9YjlDDMqUtD2-O4qTb6ahHcuGvIzNy30bYWz3blFqg9bxp8onsR_ajooxNUwkdvkUUvcyb40u2SISaf3C9e0aIfrsrJpVS0wvJIA5QKVO9Kwt4UuaSe_symMa4gFkE1tmpe4KzJXnqPlMbXKxDSxFzv_etSyQmX-yv5PamQvwhxMHXn74pk7Eb-fb-mZvEi8pt7VbyGUqsUIRe9cuU0_fqicC9-L-TqnjMiHpZMaMQ"/>
+            </div>
+            <div class="w-[450px] md:w-[700px] h-[320px] shrink-0 rounded-2xl overflow-hidden animate-float image-glow transition-all duration-500 hover:scale-[1.02]">
+                <img alt="Trà xanh" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBTQ-NjwWsyR3v3F81CalUZnn7mzFdRcSqxd6QT24MmM5RDIEABkNnNHmVPHMzwO7UGuPCLaZxv4uDcHCoBw_g_o8wveJikazqMqpZ7PV5thIgX_twUNH4d2SMThrM4ZxbeNAl3ZV4-jndoccPEF_AbQ9AAcnDnMKI0-S9LzHviLEOVIuVBqGpdjn8I-WEPyEHl3j01zJJIL_eoIza1OoDXOLRZ9TK6Sfi-AOfNtR4FJtayWAAKuzrOSg"/>
+            </div>
+            <div class="w-[300px] md:w-[450px] h-[420px] shrink-0 rounded-2xl overflow-hidden animate-float-delayed image-glow transition-all duration-500 hover:scale-[1.02]">
+                <img alt="Tôm cuốn" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD7ZI0HA2sSncksHCZgwmobWfKa_nfSiSQymI-YFvZbiHaR2258ZHicGlfjjuILED9SCMK70tOg3Lzazj2KYi0GV2G0xldh-aOaAB7cESqDL5VYFbNejIxl49-mqw4zGT1vRz80-4x5F3lNRXYEVvoFHrhfiJTouKJDT-K_XvVD8rlNfSmmb5lY_aZ0xtbVXtJP5cpaEXDJQilFAUw1U85bisqwSh1c3a8kpUMI44vg2AGHIScXs38P_g"/>
+            </div>
+            <!-- Duplicate for seamless loop -->
+            <div class="w-[350px] md:w-[550px] h-[380px] shrink-0 rounded-2xl overflow-hidden animate-float-delayed image-glow transition-all duration-500 hover:scale-[1.02]">
+                <img alt="Mì gạo" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC2qTDGgHnL0bmzOzwXcyeM4UYArZJmc1Z3_CqXb7uLLe5OsyxlmlLtRJ23jW8Vd57QB-DFxk7z12Y5YkafqrwQedRbJMW2BW4eT8TBkZ2sLHnfsG3qx4O4ZsHgBUsMTUjOao18RmP8bdzshNWY74AGQBan7uJDm0Q-qN4XXNaVlao_beDk8VtE9JQQorQuMXSxXZ8u8XgGPTUJpvvWuDfSEQmXsCSbVWsx4WTxR_JDaDi0KaaKlCwJ-g"/>
+            </div>
+            <div class="w-[300px] md:w-[400px] h-[450px] shrink-0 rounded-2xl overflow-hidden animate-float-slow image-glow transition-all duration-500 hover:scale-[1.02]">
+                <img alt="Đặc sản" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB9rD7DgSGaqz_svzwyPdyHSFu3ovWJLKxHyUw_jffiuivIJ1-mGTxqjPa4i3cUJP9acwbZ0hBvLmWtxlxcNFL6tRR7b_Qg-V9ajaAWTKgxPF9jOgFyeVxai2sPlT64BvwSJqHIEvcEIf3BIeteU68Q8MwiyVF-c1xJbDgUI270GBtpZFDySH94fRaT8d_byFpg_oEdmPuuMvBwZLljfFZVTOOZvII5GTDjQGRnQVSCT9pKxket1buMFQ"/>
+            </div>
+            <div class="w-[450px] md:w-[700px] h-[320px] shrink-0 rounded-2xl overflow-hidden animate-float image-glow transition-all duration-500 hover:scale-[1.02]">
+                <img alt="Trà xanh" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCkSLU9sfJ5kRbljgL3TO8lNFBTenpMcGGCIYpVefeafz42cthQ6Iig1PhB5x9w2TMCx6zJ511jY2ImDDqcyV2RxwZvkf0a_WSK54KcTW56AGs0pHlgHkkV8wtVlCsgGfNGWv7Ab60UfvPprcjPhfxTcZx3pcJUYxgOogyeQadw7P3SYbw-j4KycvfMFFKBEDKYTzD6W8EWjcDf4j_fUA22gXZWjfBRZU53cUHVtGHwyXZ7D822qk_zeA"/>
+            </div>
+            <div class="w-[300px] md:w-[450px] h-[420px] shrink-0 rounded-2xl overflow-hidden animate-float-delayed image-glow transition-all duration-500 hover:scale-[1.02]">
+                <img alt="Tôm cuốn" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDap2V_7r7A7JNhkvqq7D_ga74t6P4NkiON4nONnwmCz0rZSn3M3U83J7aDREubE6o_ZSHikILvCLTmzCU-GKXgVFJQYBXwsefVMLSVmGSEOyxSvRGCNub08wYwhN8SPY6Q9LLv7D0oVG1TEFhjVTFwuI7OULpGsrRtETKcdkZ78UCawAevzUaMTtmEOMoDWqClpf_P4eCheDDlKGHXhLD-KSUUCA9hi6zRoOSabphY-FzZzW754LtVzg"/>
+            </div>
+        </div>
+    </div>
+</main>
+<!-- Footer -->
+<footer class="w-full mt-auto bg-surface-container-lowest dark:bg-inverse-surface border-t border-outline-variant/10">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-gutter max-w-container-max mx-auto px-margin-desktop py-16">
+        <div class="col-span-1 md:col-span-1">
+            <span class="font-headline-md text-headline-md text-secondary mb-4 block">Đặc Sản Thái Nguyên</span>
+            <p class="font-body-md text-body-md text-on-surface-variant mb-6">Tinh hoa từ vùng đất chè, mang hương vị truyền thống đến mọi nẻo đường.</p>
+            <div class="flex gap-4">
+                <a class="text-on-surface-variant hover:text-secondary transition-all duration-300" href="#"><span class="material-symbols-outlined">qr_code_2</span></a>
+                <a class="text-on-surface-variant hover:text-secondary transition-all duration-300" href="#"><span class="material-symbols-outlined">photo_camera</span></a>
+            </div>
+        </div>
+        <div class="col-span-1">
+            <h4 class="font-headline-md text-headline-md text-on-surface mb-4">Về chúng tôi</h4>
+            <ul class="space-y-3 font-body-md text-body-md text-on-surface-variant">
+                <li><a class="hover:underline transition-all" href="#">Câu chuyện thương hiệu</a></li>
+                <li><a class="hover:underline transition-all" href="#">Hướng dẫn mua hàng</a></li>
+                <li><a class="hover:underline transition-all" href="#">Chính sách vận chuyển</a></li>
+            </ul>
+        </div>
+        <div class="col-span-1">
+            <h4 class="font-headline-md text-headline-md text-on-surface mb-4">Sản phẩm</h4>
+            <ul class="space-y-3 font-body-md text-body-md text-on-surface-variant">
+                <li><a class="hover:underline transition-all" href="sanpham.html">Trà Thái Nguyên</a></li>
+                <li><a class="hover:underline transition-all" href="sanpham.html">Sản phẩm OCOP</a></li>
+                <li><a class="hover:underline transition-all" href="sanpham.html">Quà tặng cao cấp</a></li>
+            </ul>
+        </div>
+        <div class="col-span-1">
+            <h4 class="font-headline-md text-headline-md text-on-surface mb-4">Liên hệ</h4>
+            <ul class="space-y-3 font-body-md text-body-md text-on-surface-variant">
+                <li class="flex items-center gap-2"><span class="material-symbols-outlined text-secondary">location_on</span> Thái Nguyên, Việt Nam</li>
+                <li class="flex items-center gap-2"><span class="material-symbols-outlined text-secondary">call</span> 1900 1234 56</li>
+                <li class="flex items-center gap-2"><span class="material-symbols-outlined text-secondary">mail</span> lienhe@dacsanthainguyen.vn</li>
+            </ul>
+        </div>
+    </div>
+    <div class="border-t border-outline-variant/10 py-6 text-center">
+        <p class="font-body-md text-body-md text-on-surface-variant">© 2024 Đặc Sản Thái Nguyên. All rights reserved.</p>
+    </div>
+</footer>
+</body>
+</html>

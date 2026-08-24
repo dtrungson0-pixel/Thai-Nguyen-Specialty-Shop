@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Đăng ký - Đặc Sản Thái Nguyên</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com" rel="preconnect"/>
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&amp;family=EB+Garamond:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "error": "#ba1a1a",
+                        "primary-container": "#c9a227",
+                        "secondary-container": "#a0f399",
+                        "secondary-fixed": "#a3f69c",
+                        "on-tertiary": "#ffffff",
+                        "surface-container-highest": "#e9e2d2",
+                        "on-secondary-fixed-variant": "#005312",
+                        "tertiary-fixed": "#ffdbcf",
+                        "secondary-fixed-dim": "#88d982",
+                        "surface-tint": "#755b00",
+                        "secondary": "#1b6d24",
+                        "tertiary-container": "#c99d8e",
+                        "on-surface": "#1e1c12",
+                        "background": "#fff9ec",
+                        "tertiary-fixed-dim": "#ebbcac",
+                        "surface-container-low": "#faf3e2",
+                        "on-tertiary-fixed": "#2e150b",
+                        "on-primary-fixed-variant": "#584400",
+                        "tertiary": "#7a5649",
+                        "on-secondary-container": "#217128",
+                        "surface-dim": "#e0dac9",
+                        "primary": "#755b00",
+                        "outline-variant": "#d1c5af",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-bright": "#fff9ec",
+                        "on-error": "#ffffff",
+                        "surface-variant": "#e9e2d2",
+                        "on-primary-container": "#4b3a00",
+                        "inverse-on-surface": "#f7f0df",
+                        "on-primary": "#ffffff",
+                        "on-surface-variant": "#4d4635",
+                        "outline": "#7f7663",
+                        "surface": "#fff9ec",
+                        "on-background": "#1e1c12",
+                        "on-tertiary-fixed-variant": "#603f33",
+                        "on-primary-fixed": "#241a00",
+                        "primary-fixed": "#ffe08e",
+                        "error-container": "#ffdad6",
+                        "primary-fixed-dim": "#ecc246",
+                        "surface-container": "#f4eddd",
+                        "inverse-surface": "#333025",
+                        "surface-container-high": "#eee8d7",
+                        "on-error-container": "#93000a",
+                        "on-tertiary-container": "#543429",
+                        "inverse-primary": "#ecc246",
+                        "on-secondary-fixed": "#002204",
+                        "on-secondary": "#ffffff"
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    spacing: {
+                        "margin-desktop": "48px",
+                        "margin-mobile": "16px",
+                        "container-max": "1280px",
+                        "gutter": "24px",
+                        "unit": "8px"
+                    },
+                    fontFamily: {
+                        "label-sm": ["Be Vietnam Pro", "sans-serif"],
+                        "body-lg": ["Be Vietnam Pro", "sans-serif"],
+                        "headline-lg": ["EB Garamond", "serif"],
+                        "headline-lg-mobile": ["EB Garamond", "serif"],
+                        "headline-md": ["EB Garamond", "serif"],
+                        "display-lg": ["EB Garamond", "serif"],
+                        "body-md": ["Be Vietnam Pro", "sans-serif"]
+                    },
+                    fontSize: {
+                        "label-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "fontWeight": "500" }],
+                        "headline-lg-mobile": ["28px", { "lineHeight": "36px", "fontWeight": "500" }],
+                        "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "500" }],
+                        "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }]
+                    }
+                }
+            }
+        };
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface antialiased h-screen overflow-hidden">
+<div class="flex h-full w-full relative">
+    <!-- Mobile Back to Home Button -->
+    <a href="index.html" class="absolute top-4 left-4 z-20 lg:hidden flex items-center gap-1 bg-surface/80 backdrop-blur px-3 py-1.5 rounded-full text-secondary font-label-sm text-label-sm shadow-sm">
+        <span class="material-symbols-outlined text-[18px]">arrow_back</span>
+        <span>Trang chủ</span>
+    </a>
+
+    <!-- Left Side: Image & Branding -->
+    <div class="hidden lg:flex lg:w-1/2 relative bg-surface-container-high overflow-hidden">
+        <a href="index.html" class="absolute top-6 left-6 z-20 flex items-center gap-1 bg-surface/80 backdrop-blur px-4 py-2 rounded-full text-secondary font-label-sm text-label-sm hover:bg-surface transition-all shadow-sm">
+            <span class="material-symbols-outlined text-[18px]">arrow_back</span>
+            <span>Về Trang chủ</span>
+        </a>
+        <div class="absolute inset-0 bg-cover bg-center" data-alt="A breathtaking, wide-angle shot of the lush, rolling tea hills of Thái Nguyên at early morning. The scene is bathed in soft, golden natural light breaking through a light mist. In the foreground, beautifully arranged on a rustic wooden stump, is a fine porcelain cup of steaming hot tea. The overarching aesthetic is premium minimalist editorial, evoking a sense of calm, luxury, and authentic Vietnamese heritage. The color palette focuses on deep, verdant greens and soft golden sunlight." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAfqJPlvy0QUI9P29Jd3K7Z_YyxjH9iXufDxpyQ7jyQJQeG3YX-CCAKv5FitN16syLbMpaOMwizPcX140pT2rUWIeNgXUxgYhg1I6uwVqJkuuk3cO6mA8LMFiSMsNVwvT9c5arn_Q7oQCPnW_1YaSdqN0bdcQ4ypN8wDh1XSvBlc1rPqmYHfIEKagHG_P6Y2bQhB1UElAJXh_E9GDdKmzu8UM8HZCZc8x0bqjouqXFbyxw0KArjX0_SVg')"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-inverse-surface/80 via-inverse-surface/40 to-transparent"></div>
+        <div class="absolute bottom-16 left-12 right-12 text-on-tertiary max-w-lg z-10">
+            <h1 class="font-display-lg text-display-lg text-on-tertiary mb-4 drop-shadow-md">Tham gia cộng đồng Đặc Sản Thái Nguyên</h1>
+            <p class="font-body-lg text-body-lg text-surface-container-lowest/90 drop-shadow-sm">Khám phá tinh hoa trà Việt và nhận ưu đãi đặc quyền.</p>
+        </div>
+        <!-- Subtle floating particles overlay effect -->
+        <div class="absolute inset-0 pointer-events-none opacity-30" style="background-image: radial-gradient(#ffffff 1px, transparent 1px); background-size: 40px 40px;"></div>
+    </div>
+
+    <!-- Right Side: Registration Form -->
+    <div class="w-full lg:w-1/2 flex flex-col justify-center items-center p-8 sm:p-12 md:p-16 bg-surface-container-lowest overflow-y-auto h-full">
+        <div class="w-full max-w-md">
+            <!-- Brand Header -->
+            <div class="text-center mb-10">
+                <a href="index.html" class="inline-block">
+                    <h2 class="font-headline-lg text-headline-lg text-secondary mb-2 hover:opacity-80 transition-opacity">Đặc Sản Thái Nguyên</h2>
+                </a>
+                <p class="font-body-md text-body-md text-on-surface-variant">Tạo tài khoản mới để tiếp tục</p>
+            </div>
+            <form class="space-y-5" onsubmit="event.preventDefault();">
+                <!-- Full Name -->
+                <div>
+                    <label class="block font-label-sm text-label-sm text-on-surface-variant mb-1" for="fullname">Họ và tên</label>
+                    <input class="w-full border-0 border-b border-outline-variant bg-transparent py-2 px-0 text-on-surface font-body-md text-body-md focus:ring-0 focus:border-primary-container transition-colors" id="fullname" name="fullname" placeholder="Nguyễn Văn A" required="" type="text"/>
+                </div>
+                <!-- Email -->
+                <div>
+                    <label class="block font-label-sm text-label-sm text-on-surface-variant mb-1" for="email">Email</label>
+                    <input class="w-full border-0 border-b border-outline-variant bg-transparent py-2 px-0 text-on-surface font-body-md text-body-md focus:ring-0 focus:border-primary-container transition-colors" id="email" name="email" placeholder="name@example.com" required="" type="email"/>
+                </div>
+                <!-- Phone Number -->
+                <div>
+                    <label class="block font-label-sm text-label-sm text-on-surface-variant mb-1" for="phone">Số điện thoại</label>
+                    <input class="w-full border-0 border-b border-outline-variant bg-transparent py-2 px-0 text-on-surface font-body-md text-body-md focus:ring-0 focus:border-primary-container transition-colors" id="phone" name="phone" placeholder="09xx xxx xxx" required="" type="tel"/>
+                </div>
+                <!-- Password -->
+                <div class="relative">
+                    <label class="block font-label-sm text-label-sm text-on-surface-variant mb-1" for="password">Mật khẩu</label>
+                    <input class="w-full border-0 border-b border-outline-variant bg-transparent py-2 px-0 pr-10 text-on-surface font-body-md text-body-md focus:ring-0 focus:border-primary-container transition-colors" id="password" name="password" placeholder="••••••••" required="" type="password"/>
+                    <button class="absolute right-0 top-6 text-on-surface-variant hover:text-secondary transition-colors" onclick="togglePassword('password', 'toggle-pwd-icon')" type="button">
+                        <span class="material-symbols-outlined text-[20px]" id="toggle-pwd-icon">visibility_off</span>
+                    </button>
+                </div>
+                <!-- Confirm Password -->
+                <div class="relative">
+                    <label class="block font-label-sm text-label-sm text-on-surface-variant mb-1" for="confirm_password">Xác nhận mật khẩu</label>
+                    <input class="w-full border-0 border-b border-outline-variant bg-transparent py-2 px-0 pr-10 text-on-surface font-body-md text-body-md focus:ring-0 focus:border-primary-container transition-colors" id="confirm_password" name="confirm_password" placeholder="••••••••" required="" type="password"/>
+                    <button class="absolute right-0 top-6 text-on-surface-variant hover:text-secondary transition-colors" onclick="togglePassword('confirm_password', 'toggle-cpwd-icon')" type="button">
+                        <span class="material-symbols-outlined text-[20px]" id="toggle-cpwd-icon">visibility_off</span>
+                    </button>
+                </div>
+                <!-- Terms Checkbox -->
+                <div class="flex items-start mt-4">
+                    <div class="flex items-center h-5">
+                        <input class="w-4 h-4 text-secondary bg-surface border-outline-variant rounded focus:ring-secondary focus:ring-2" id="terms" type="checkbox"/>
+                    </div>
+                    <label class="ml-2 font-body-md text-[14px] text-on-surface-variant leading-snug" for="terms">
+                        Tôi đồng ý với <a class="text-secondary hover:underline font-medium" href="#">Điều khoản dịch vụ</a> và <a class="text-secondary hover:underline font-medium" href="#">Chính sách bảo mật</a>
+                    </label>
+                </div>
+                <!-- Submit Button -->
+                <button class="w-full bg-secondary hover:bg-on-secondary-container text-on-secondary font-label-sm text-label-sm py-3 px-4 rounded transition-all duration-300 mt-6 flex justify-center items-center shadow-[0_4px_14px_rgba(46,125,50,0.2)] hover:shadow-[0_6px_20px_rgba(46,125,50,0.3)]" type="submit">
+                    Đăng ký
+                </button>
+            </form>
+            <!-- Divider -->
+            <div class="flex items-center my-8">
+                <div class="flex-grow border-t border-outline-variant/30"></div>
+                <span class="px-4 text-on-surface-variant font-label-sm text-label-sm">Hoặc đăng ký bằng</span>
+                <div class="flex-grow border-t border-outline-variant/30"></div>
+            </div>
+            <!-- Social Login -->
+            <div class="grid grid-cols-2 gap-4 mb-8">
+                <button class="flex justify-center items-center gap-2 border border-outline-variant/50 hover:bg-surface-container-low py-2.5 px-4 rounded transition-colors font-body-md text-body-md text-on-surface">
+                    <svg class="w-5 h-5" fill="none" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"></path><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"></path><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"></path><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"></path></svg>
+                    Google
+                </button>
+                <button class="flex justify-center items-center gap-2 border border-outline-variant/50 hover:bg-surface-container-low py-2.5 px-4 rounded transition-colors font-body-md text-body-md text-on-surface">
+                    <svg aria-hidden="true" class="w-5 h-5 text-[#1877F2]" fill="currentColor" viewbox="0 0 24 24"><path clip-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" fill-rule="evenodd"></path></svg>
+                    Facebook
+                </button>
+            </div>
+            <!-- Login Link -->
+            <p class="text-center font-body-md text-[14px] text-on-surface-variant">
+                Đã có tài khoản? <a class="text-secondary font-medium hover:underline" href="login.html">Đăng nhập ngay</a>
+            </p>
+        </div>
+    </div>
+</div>
+<script>
+    function togglePassword(inputId, iconId) {
+        const input = document.getElementById(inputId);
+        const icon = document.getElementById(iconId);
+        
+        if (input.type === 'password') {
+            input.type = 'text';
+            icon.textContent = 'visibility';
+        } else {
+            input.type = 'password';
+            icon.textContent = 'visibility_off';
+        }
+    }
+</script>
+</body>
+</html>

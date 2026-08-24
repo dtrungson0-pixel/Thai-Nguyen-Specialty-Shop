@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Danh Mục - Đặc Sản Thái Nguyên</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&amp;family=EB+Garamond:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface": "#fff9ec",
+                        "on-surface": "#1e1c12",
+                        "secondary": "#1b6d24",
+                        "surface-container-low": "#faf3e2",
+                        "outline-variant": "#d1c5af"
+                    },
+                    "fontFamily": {
+                        "body-md": ["Be Vietnam Pro", "sans-serif"],
+                        "headline-lg": ["EB Garamond", "serif"]
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { background-color: theme('colors.surface'); color: theme('colors.on-surface'); }
+    </style>
+</head>
+<body class="antialiased min-h-screen font-body-md text-body-md flex flex-col">
+    <!-- Simple Header -->
+    <header class="bg-surface shadow-sm border-b border-outline-variant/10 p-4">
+        <div class="max-w-7xl mx-auto flex items-center justify-between">
+            <a href="index.html" class="flex items-center gap-2 text-secondary hover:opacity-80 transition-opacity">
+                <span class="material-symbols-outlined">arrow_back</span>
+                <span>Quay lại Trang chủ</span>
+            </a>
+            <h1 class="font-headline-lg text-2xl font-bold text-secondary">Đặc Sản Thái Nguyên</h1>
+            <div class="w-24"></div> <!-- Spacer -->
+        </div>
+    </header>
+
+    <!-- Content -->
+    <main class="flex-grow p-8 max-w-7xl mx-auto w-full">
+        <div class="text-center py-12 bg-surface-container-low rounded-xl border border-outline-variant/20">
+            <h2 id="category-title" class="font-headline-lg text-4xl text-secondary mb-4">Đang tải...</h2>
+            <p class="text-gray-600">Sản phẩm thuộc danh mục này đang được cập nhật.</p>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-outline-variant/10 py-6 text-center mt-auto">
+        <p>© 2024 Đặc Sản Thái Nguyên. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const categoryId = urlParams.get('id');
+        
+        const categoryTitles = {
+            'tra-tan-cuong': 'Trà Tân Cương',
+            'tra-dinh': 'Trà Đinh',
+            'tra-moc-cau': 'Trà Móc Câu',
+            'mat-ong': 'Mật Ong'
+        };
+
+        const titleElement = document.getElementById('category-title');
+        if (categoryId && categoryTitles[categoryId]) {
+            titleElement.textContent = 'Danh mục: ' + categoryTitles[categoryId];
+            document.title = categoryTitles[categoryId] + ' - Đặc Sản Thái Nguyên';
+        } else {
+            titleElement.textContent = 'Danh mục không tồn tại';
+        }
+    </script>
+</body>
+</html>

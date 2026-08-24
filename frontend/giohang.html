@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Giỏ hàng &amp; Yêu thích | Đặc Sản Thái Nguyên</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com" rel="preconnect"/>
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&amp;family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "background": "#fff9ec",
+                        "tertiary-fixed-dim": "#ebbcac",
+                        "on-primary-fixed-variant": "#584400",
+                        "surface-container": "#f4eddd",
+                        "surface-container-lowest": "#ffffff",
+                        "inverse-primary": "#ecc246",
+                        "on-tertiary-container": "#543429",
+                        "surface-bright": "#fff9ec",
+                        "on-error-container": "#93000a",
+                        "on-secondary-fixed-variant": "#005312",
+                        "error": "#ba1a1a",
+                        "on-secondary-fixed": "#002204",
+                        "surface-variant": "#e9e2d2",
+                        "on-primary-fixed": "#241a00",
+                        "tertiary-container": "#c99d8e",
+                        "on-surface": "#1e1c12",
+                        "primary-container": "#c9a227",
+                        "on-secondary-container": "#217128",
+                        "on-primary": "#ffffff",
+                        "on-primary-container": "#4b3a00",
+                        "surface-container-low": "#faf3e2",
+                        "on-error": "#ffffff",
+                        "surface": "#fff9ec",
+                        "primary": "#755b00",
+                        "surface-container-high": "#eee8d7",
+                        "on-tertiary": "#ffffff",
+                        "outline-variant": "#d1c5af",
+                        "secondary": "#1b6d24",
+                        "tertiary-fixed": "#ffdbcf",
+                        "tertiary": "#7a5649",
+                        "on-tertiary-fixed-variant": "#603f33",
+                        "inverse-surface": "#333025",
+                        "surface-tint": "#755b00",
+                        "surface-container-highest": "#e9e2d2",
+                        "outline": "#7f7663",
+                        "on-background": "#1e1c12",
+                        "surface-dim": "#e0dac9",
+                        "on-surface-variant": "#4d4635",
+                        "secondary-container": "#a0f399",
+                        "on-tertiary-fixed": "#2e150b",
+                        "on-secondary": "#ffffff",
+                        "secondary-fixed-dim": "#88d982",
+                        "inverse-on-surface": "#f7f0df",
+                        "secondary-fixed": "#a3f69c",
+                        "primary-fixed-dim": "#ecc246",
+                        "primary-fixed": "#ffe08e",
+                        "error-container": "#ffdad6"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "margin-desktop": "48px",
+                        "container-max": "1280px",
+                        "gutter": "24px",
+                        "unit": "8px",
+                        "margin-mobile": "16px"
+                    },
+                    "fontFamily": {
+                        "label-sm": ["Be Vietnam Pro", "sans-serif"],
+                        "headline-md": ["EB Garamond", "serif"],
+                        "body-lg": ["Be Vietnam Pro", "sans-serif"],
+                        "headline-lg-mobile": ["EB Garamond", "serif"],
+                        "body-md": ["Be Vietnam Pro", "sans-serif"],
+                        "display-lg": ["EB Garamond", "serif"],
+                        "headline-lg": ["EB Garamond", "serif"]
+                    },
+                    "fontSize": {
+                        "label-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "500" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "headline-lg-mobile": ["28px", { "lineHeight": "36px", "fontWeight": "500" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "fontWeight": "500" }]
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { background-color: #fff9ec; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+    </style>
+</head>
+<body class="bg-background text-on-background antialiased min-h-screen flex flex-col">
+<!-- TopAppBar -->
+<header class="docked full-width top-0 sticky z-50 bg-surface/85 backdrop-blur-md border-b border-outline-variant/10 shadow-sm transition-transform duration-150">
+    <div class="flex flex-col w-full max-w-container-max mx-auto px-margin-desktop">
+        <div class="flex items-center justify-between h-20">
+            <!-- Brand -->
+            <a class="font-headline-lg text-headline-lg font-bold text-secondary flex-shrink-0" href="index.html">
+                Đặc Sản Thái Nguyên
+            </a>
+            <!-- Desktop Navigation -->
+            <nav class="hidden md:flex items-center space-x-8 flex-1 justify-center">
+                <a class="font-label-sm text-label-sm text-on-surface-variant hover:text-secondary transition-colors duration-200 uppercase" href="index.html">Trang chủ</a>
+                <a class="font-label-sm text-label-sm text-on-surface-variant hover:text-secondary transition-colors duration-200 uppercase" href="sanpham.html">Sản phẩm</a>
+            </nav>
+            <!-- Actions -->
+            <div class="flex items-center space-x-2 md:space-x-4">
+                <button onclick="switchTab('wishlist')" aria-label="favorite" class="text-on-surface-variant hover:text-secondary transition-colors p-2">
+                    <span class="material-symbols-outlined">favorite</span>
+                </button>
+                <!-- Active Cart Icon -->
+                <a href="giohang.html" aria-label="shopping_cart" class="text-secondary font-bold border-b-2 border-secondary pb-1 transition-colors p-2 flex items-center gap-1">
+                    <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">shopping_cart</span>
+                    <span class="hidden md:inline font-label-sm text-label-sm">Giỏ hàng</span>
+                </a>
+                <a href="login.html" aria-label="person" class="text-on-surface-variant hover:text-secondary transition-colors p-2 flex items-center gap-1">
+                    <span class="material-symbols-outlined">person</span>
+                    <span class="hidden md:inline font-label-sm text-label-sm">Tài khoản</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</header>
+<!-- Main Content -->
+<main class="flex-grow w-full max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-12">
+    <!-- Tab Navigation (Cart vs Wishlist) -->
+    <div class="flex border-b border-outline-variant/30 mb-12" role="tablist">
+        <button aria-selected="true" class="px-8 py-4 font-headline-md text-headline-md text-secondary border-b-2 border-secondary" id="tab-cart" onclick="switchTab('cart')" role="tab">
+            Giỏ Hàng
+        </button>
+        <button aria-selected="false" class="px-8 py-4 font-headline-md text-headline-md text-on-surface-variant hover:text-secondary transition-colors" id="tab-wishlist" onclick="switchTab('wishlist')" role="tab">
+            Yêu Thích
+        </button>
+    </div>
+    <!-- Cart View -->
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter" id="view-cart">
+        <!-- Product List -->
+        <div class="lg:col-span-8 space-y-8">
+            <!-- Desktop Table Header -->
+            <div class="hidden md:grid grid-cols-12 gap-4 pb-4 border-b border-outline-variant/20 font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">
+                <div class="col-span-6">Sản phẩm</div>
+                <div class="col-span-2 text-center">Giá</div>
+                <div class="col-span-2 text-center">Số lượng</div>
+                <div class="col-span-2 text-right">Tổng</div>
+            </div>
+            <!-- Cart Item 1 -->
+            <div class="flex flex-col md:grid md:grid-cols-12 gap-4 items-center py-6 border-b border-outline-variant/10">
+                <div class="w-full md:col-span-6 flex gap-6 items-center">
+                    <div class="relative w-24 h-24 flex-shrink-0 bg-surface-container-lowest overflow-hidden rounded">
+                        <img alt="Trà Nõn Tôm" class="w-full h-full object-cover" data-alt="A meticulously curated high-end product photograph of premium Vietnamese green tea leaves presented in an elegant, minimalist ceramic bowl. The lighting is soft, diffused, and natural, creating a bright, airy light-mode aesthetic with cream and organic green tones. The setting suggests luxury and authenticity, perfect for a premium e-commerce platform." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDvF-TyG94oQmuGWJb6QDt-hSGt_RHmpc1GcrloXsYedNxNlWk8gCk4Snfe2iRLt1I69UC6h0-cGwAqHJC9PVK7lh2N2rAnfzMwI3D-5yVt5U4Ak3QFZ_2xs0qkPj66KrpbksAPW7SfbTC2599AnZLNyPnnFXrLtjseTXXWdHqn3quB33Rhj5sbGZZFzOmUHdvDjjyB68qg5hhd-HtDYOgXAClBfGEJfLX8e0dcXKgKV6PZxwh1OZWPlA"/>
+                    </div>
+                    <div class="flex-grow">
+                        <h3 class="font-body-lg text-body-lg text-on-surface mb-1">Trà Nõn Tôm Thượng Hạng</h3>
+                        <span class="inline-block px-2 py-1 bg-[#E8F5E9] text-[#1B5E20] font-label-sm text-label-sm rounded uppercase mb-2">Đặc sản Thái Nguyên</span>
+                        <button class="text-on-surface-variant hover:text-error transition-colors flex items-center gap-1 font-label-sm text-label-sm mt-1">
+                            <span class="material-symbols-outlined text-[16px]">delete</span>
+                            <span>Xóa</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="w-full flex justify-between md:contents">
+                    <div class="md:col-span-2 text-center font-body-md text-body-md text-on-surface-variant">
+                        <span class="md:hidden">Giá: </span>850.000₫
+                    </div>
+                    <div class="md:col-span-2 flex justify-center items-center">
+                        <div class="flex border border-outline-variant rounded items-center">
+                            <button aria-label="Giảm" class="w-8 h-8 flex items-center justify-center text-on-surface-variant hover:bg-surface-container-high transition-colors">-</button>
+                            <input aria-label="Số lượng" class="w-12 h-8 text-center border-none bg-transparent font-body-md text-body-md focus:ring-0 p-0 m-0" min="1" type="number" value="1"/>
+                            <button aria-label="Tăng" class="w-8 h-8 flex items-center justify-center text-on-surface-variant hover:bg-surface-container-high transition-colors">+</button>
+                        </div>
+                    </div>
+                    <div class="md:col-span-2 text-right font-body-lg text-body-lg text-on-surface">
+                        <span class="md:hidden">Tổng: </span>850.000₫
+                    </div>
+                </div>
+            </div>
+            <!-- Cart Item 2 -->
+            <div class="flex flex-col md:grid md:grid-cols-12 gap-4 items-center py-6 border-b border-outline-variant/10">
+                <div class="w-full md:col-span-6 flex gap-6 items-center">
+                    <div class="relative w-24 h-24 flex-shrink-0 bg-surface-container-lowest overflow-hidden rounded">
+                        <img alt="Hộp Quà Tặng" class="w-full h-full object-cover" data-alt="An exquisite, minimalist lifestyle photograph of an elegant gift box containing premium Oolong tea. The packaging features subtle gold foil accents against a pristine white background. Bathed in soft, high-key lighting that emphasizes a modern, luxurious light-mode aesthetic, creating a serene, premium boutique atmosphere with organic warmth." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBuGRCTfnMFGbr4fhgHryhcG92WgL9tE2HOhkjUzcBkU4z9sOXvmDKemXKm_GiAGt2g6E5yewQ_EhicWRlkbA_hpfZphHc8mLu_9ehaK_CnZys8D06WbrkG-dyHy8ydnyHAEFeaF0-V5RqwlEGn3cKBmdF4RJ4qTrZY54BGbuLSTsMK2Nn2_HtINsDdxkVTq78t_Z0MRSQgUpXzK9tb2OLldsMp5tJOyIV0Y-IXCdE5SQxLJoewuoG4Ig"/>
+                    </div>
+                    <div class="flex-grow">
+                        <h3 class="font-body-lg text-body-lg text-on-surface mb-1">Hộp Quà Tặng Trà Oolong Cao Cấp</h3>
+                        <span class="inline-block px-2 py-1 bg-[#E8F5E9] text-[#1B5E20] font-label-sm text-label-sm rounded uppercase mb-2">Quà Tặng</span>
+                        <button class="text-on-surface-variant hover:text-error transition-colors flex items-center gap-1 font-label-sm text-label-sm mt-1">
+                            <span class="material-symbols-outlined text-[16px]">delete</span>
+                            <span>Xóa</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="w-full flex justify-between md:contents">
+                    <div class="md:col-span-2 text-center font-body-md text-body-md text-on-surface-variant">
+                        <span class="md:hidden">Giá: </span>1.200.000₫
+                    </div>
+                    <div class="md:col-span-2 flex justify-center items-center">
+                        <div class="flex border border-outline-variant rounded items-center">
+                            <button aria-label="Giảm" class="w-8 h-8 flex items-center justify-center text-on-surface-variant hover:bg-surface-container-high transition-colors">-</button>
+                            <input aria-label="Số lượng" class="w-12 h-8 text-center border-none bg-transparent font-body-md text-body-md focus:ring-0 p-0 m-0" min="1" type="number" value="2"/>
+                            <button aria-label="Tăng" class="w-8 h-8 flex items-center justify-center text-on-surface-variant hover:bg-surface-container-high transition-colors">+</button>
+                        </div>
+                    </div>
+                    <div class="md:col-span-2 text-right font-body-lg text-body-lg text-on-surface">
+                        <span class="md:hidden">Tổng: </span>2.400.000₫
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Order Summary Sidebar -->
+        <div class="lg:col-span-4 mt-8 lg:mt-0">
+            <div class="bg-surface-container-lowest p-8 rounded-lg shadow-[0_10px_30px_rgba(46,125,50,0.05)] sticky top-32">
+                <h2 class="font-headline-md text-headline-md text-on-surface mb-6 border-b border-outline-variant/20 pb-4">Tóm tắt đơn hàng</h2>
+                <div class="space-y-4 font-body-md text-body-md text-on-surface-variant mb-6">
+                    <div class="flex justify-between">
+                        <span>Tạm tính</span>
+                        <span>3.250.000₫</span>
+                    </div>
+                    <div class="flex justify-between">
+                        <span>Giảm giá</span>
+                        <span class="text-error">- 0₫</span>
+                    </div>
+                    <div class="flex justify-between">
+                        <span>Phí vận chuyển</span>
+                        <span>Miễn phí</span>
+                    </div>
+                </div>
+                <div class="border-t border-outline-variant/20 pt-6 mb-8">
+                    <div class="flex justify-between items-end">
+                        <span class="font-body-lg text-body-lg text-on-surface">Tổng cộng</span>
+                        <span class="font-headline-lg text-headline-lg text-secondary">3.250.000₫</span>
+                    </div>
+                    <p class="font-label-sm text-label-sm text-on-surface-variant text-right mt-1">(Đã bao gồm VAT)</p>
+                </div>
+                <button class="w-full bg-primary-container text-on-primary-container font-label-sm text-label-sm uppercase tracking-wider py-4 rounded hover:bg-inverse-primary transition-colors duration-300">
+                    Tiến hành thanh toán
+                </button>
+                <div class="mt-6 flex items-center justify-center gap-2 text-on-surface-variant font-label-sm text-label-sm">
+                    <span class="material-symbols-outlined text-[16px]">verified</span>
+                    <span>Thanh toán an toàn 100%</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Wishlist View (Hidden by default) -->
+    <div class="hidden" id="view-wishlist">
+        <div class="flex justify-between items-center mb-8">
+            <h2 class="font-headline-md text-headline-md text-on-surface">Sản phẩm đã lưu (3)</h2>
+            <button class="bg-secondary text-on-primary px-6 py-2 rounded font-label-sm text-label-sm uppercase tracking-wider hover:bg-on-secondary-container transition-colors">
+                Thêm tất cả vào giỏ
+            </button>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-gutter">
+            <!-- Wishlist Item 1 -->
+            <div class="group bg-surface-container-lowest rounded overflow-hidden">
+                <div class="relative aspect-square overflow-hidden bg-surface-variant">
+                    <img alt="Ấm Trà" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="A meticulously styled, minimalist premium lifestyle shot of a traditional Vietnamese tea pot sitting on a clean, light wood surface. Gentle morning sunlight streams across the composition creating soft, bright, and airy light-mode aesthetics. The mood is serene, emphasizing luxury, authenticity, and refined craftsmanship in a high-end e-commerce context." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDAMK0L7eWToy7nI0QDw7Fvx_RyXax0GxVH8vpQInGUA7j-oFkwGSU_l5xyXMk6OJZE1V77xAvhB05KRCtF4-8df96fQV1f-ueJIHJnNbrMSYQ6sIVsGHlelQN1Fh0fwgHhLGBpmg-yjvQuUdZX_ViKRgcvnMN8poUsTl6RJrSKfgvJUpJ7NmwwPueZpNKW2F71_--trzvLhmMJ0DGtA4F_GL4ssdRQ31-o-OP0iFiu2GDqPzOzzanqyA"/>
+                    <button aria-label="Xóa khỏi yêu thích" class="absolute top-4 right-4 bg-surface/80 backdrop-blur rounded-full p-2 text-error hover:bg-surface transition-colors shadow-sm">
+                        <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">favorite</span>
+                    </button>
+                </div>
+                <div class="p-4 flex flex-col gap-2">
+                    <h3 class="font-body-lg text-body-lg text-on-surface leading-tight">Ấm Tử Sa Nghệ Nhân</h3>
+                    <p class="font-headline-md text-headline-md text-secondary">1.500.000₫</p>
+                    <button class="mt-2 w-full border border-tertiary text-tertiary py-2 rounded font-label-sm text-label-sm uppercase hover:bg-tertiary hover:text-on-tertiary transition-colors">
+                        Thêm vào giỏ
+                    </button>
+                </div>
+            </div>
+            <!-- Wishlist Item 2 -->
+            <div class="group bg-surface-container-lowest rounded overflow-hidden">
+                <div class="relative aspect-square overflow-hidden bg-surface-variant">
+                    <img alt="Trà Xanh" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="An elegant, minimalist close-up shot of loose leaf green tea scattered delicately next to a sleek, modern tea cup on a pristine white background. Soft, natural lighting creates a high-key, airy light-mode aesthetic, emphasizing the vibrant green hues and organic textures. The composition feels luxurious, calm, and perfectly suited for a premium online tea boutique." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD4caxoyjhwykCufENsvsibDxVPdDNPe-mLrdIG8E_ELvo_6EMiYdobX840-z14o0jqZgtum5N9-d8kXelL7Kb77kFf5EXJ_BWhwf38_B1zP5aKUa1N981Wx1Lcu1GLM5Q8QFwpusaMjaxXCh4h6vYx1KVt1ImD9TO64niit7hKfBzjQcPoGhMYq1O2zaI9e3FA4NglxVoHEi92sILGRotuilonvxEuY0sfWbDlVMaM6siBR43GL2Rufw"/>
+                    <button aria-label="Xóa khỏi yêu thích" class="absolute top-4 right-4 bg-surface/80 backdrop-blur rounded-full p-2 text-error hover:bg-surface transition-colors shadow-sm">
+                        <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">favorite</span>
+                    </button>
+                </div>
+                <div class="p-4 flex flex-col gap-2">
+                    <h3 class="font-body-lg text-body-lg text-on-surface leading-tight">Trà Móc Câu Thượng Hạng</h3>
+                    <p class="font-headline-md text-headline-md text-secondary">650.000₫</p>
+                    <button class="mt-2 w-full border border-tertiary text-tertiary py-2 rounded font-label-sm text-label-sm uppercase hover:bg-tertiary hover:text-on-tertiary transition-colors">
+                        Thêm vào giỏ
+                    </button>
+                </div>
+            </div>
+            <!-- Wishlist Item 3 -->
+            <div class="group bg-surface-container-lowest rounded overflow-hidden">
+                <div class="relative aspect-square overflow-hidden bg-surface-variant">
+                    <img alt="Trà Shan Tuyết" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="A highly curated, premium still-life photograph featuring a beautifully packaged artisanal tea blend. The setting is clean and minimalist, utilizing abundant white space and soft, diffused natural light to create a pristine light-mode look. The color palette focuses on creamy whites, organic greens, and subtle earthy browns, projecting luxury and natural purity." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC5JYOE3usypZ2eh62ouFQ8HocGdVWqDdaXY3cv9N0zqQum-YFJuO2vaw4QxzE8dv5RIanLicQw-zc1yyLYvikmAeoJkBOWzpJo0h9F3rYUO0dq-Vja9aUgjAsTz9eEm9_RjHLE8FfpVvsjqDcIQ3i3Y6RKsLpF7mLfIjxm8VMehB_McJZ9I7UyALz8jj_xJks_0e_VZHyCAWKAe2hvtovtMnxe7hEH68uC5Liy6o9AQxZxRC88hNeY0g"/>
+                    <button aria-label="Xóa khỏi yêu thích" class="absolute top-4 right-4 bg-surface/80 backdrop-blur rounded-full p-2 text-error hover:bg-surface transition-colors shadow-sm">
+                        <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">favorite</span>
+                    </button>
+                </div>
+                <div class="p-4 flex flex-col gap-2">
+                    <h3 class="font-body-lg text-body-lg text-on-surface leading-tight">Trà Shan Tuyết Cổ Thụ</h3>
+                    <p class="font-headline-md text-headline-md text-secondary">2.100.000₫</p>
+                    <button class="mt-2 w-full border border-tertiary text-tertiary py-2 rounded font-label-sm text-label-sm uppercase hover:bg-tertiary hover:text-on-tertiary transition-colors">
+                        Thêm vào giỏ
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="docked full-width bottom-0 z-50 md:hidden bg-surface shadow-[0_-4px_20px_rgba(46,125,50,0.05)] fixed left-0 w-full flex justify-around items-center px-4 py-2 pb-safe">
+    <a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-secondary active:bg-surface-container-high transition-colors" href="index.html">
+        <span class="material-symbols-outlined mb-1">home</span>
+        <span class="font-label-sm text-label-sm text-[10px]">Trang chủ</span>
+    </a>
+    <a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-secondary active:bg-surface-container-high transition-colors" href="sanpham.html">
+        <span class="material-symbols-outlined mb-1">grid_view</span>
+        <span class="font-label-sm text-label-sm text-[10px]">Sản phẩm</span>
+    </a>
+    <a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-secondary active:bg-surface-container-high transition-colors" href="javascript:void(0)" onclick="switchTab('wishlist')">
+        <span class="material-symbols-outlined mb-1">favorite</span>
+        <span class="font-label-sm text-label-sm text-[10px]">Yêu thích</span>
+    </a>
+    <a class="flex flex-col items-center justify-center bg-secondary-container text-on-secondary-container rounded-full px-4 py-1 active:bg-surface-container-high scale-90 transition-transform duration-200" href="giohang.html">
+        <span class="material-symbols-outlined mb-1">shopping_bag</span>
+        <span class="font-label-sm text-label-sm text-[10px]">Giỏ hàng</span>
+    </a>
+</nav>
+<!-- Footer -->
+<footer class="w-full mt-20 bg-surface-container-lowest border-t border-outline-variant/10">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-gutter max-w-container-max mx-auto px-margin-desktop py-16">
+        <div class="col-span-1 md:col-span-1">
+            <span class="font-headline-md text-headline-md text-secondary mb-4 block">Đặc Sản Thái Nguyên</span>
+            <p class="font-body-md text-body-md text-on-surface-variant mb-4">Tinh hoa trà Việt, mang hương vị núi rừng đến mọi nhà.</p>
+            <p class="font-body-md text-body-md text-on-surface-variant">© 2024 Đặc Sản Thái Nguyên. All rights reserved.</p>
+        </div>
+        <div class="col-span-1 md:col-span-3 grid grid-cols-2 md:grid-cols-3 gap-8">
+            <div>
+                <h4 class="font-headline-md text-headline-md text-on-surface mb-4">Về chúng tôi</h4>
+                <ul class="space-y-2">
+                    <li><a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary hover:underline transition-all" href="#">Câu chuyện thương hiệu</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-headline-md text-headline-md text-on-surface mb-4">Hỗ trợ</h4>
+                <ul class="space-y-2">
+                    <li><a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary hover:underline transition-all" href="#">Hướng dẫn mua hàng</a></li>
+                    <li><a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary hover:underline transition-all" href="#">Chính sách vận chuyển</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-headline-md text-headline-md text-on-surface mb-4">Sản phẩm</h4>
+                <ul class="space-y-2">
+                    <li><a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary hover:underline transition-all" href="sanpham.html">Trà Thái Nguyên</a></li>
+                    <li><a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary hover:underline transition-all" href="sanpham.html">Sản phẩm OCOP</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+<script>
+    function switchTab(tab) {
+        const cartTab = document.getElementById('tab-cart');
+        const wishlistTab = document.getElementById('tab-wishlist');
+        const viewCart = document.getElementById('view-cart');
+        const viewWishlist = document.getElementById('view-wishlist');
+
+        const activeClass = ['text-secondary', 'border-b-2', 'border-secondary'];
+        const inactiveClass = ['text-on-surface-variant', 'hover:text-secondary'];
+
+        if (tab === 'cart') {
+            viewCart.classList.remove('hidden');
+            viewWishlist.classList.add('hidden');
+            
+            cartTab.classList.add(...activeClass);
+            cartTab.classList.remove(...inactiveClass);
+            
+            wishlistTab.classList.remove(...activeClass);
+            wishlistTab.classList.add(...inactiveClass);
+        } else {
+            viewWishlist.classList.remove('hidden');
+            viewCart.classList.add('hidden');
+            
+            wishlistTab.classList.add(...activeClass);
+            wishlistTab.classList.remove(...inactiveClass);
+            
+            cartTab.classList.remove(...activeClass);
+            cartTab.classList.add(...inactiveClass);
+        }
+    }
+
+    // Check url hash for #wishlist or #cart
+    if (window.location.hash === '#wishlist') {
+        switchTab('wishlist');
+    }
+</script>
+</body>
+</html>
